@@ -43,7 +43,7 @@
  *
  * See docs.qmk.fm/using-qmk/software-features/tap_hold#tapping-term
  */
-#    define TAPPING_TERM 190
+#    define TAPPING_TERM 190.
 #endif // TAPPING_TERM
 
 /**
@@ -52,9 +52,9 @@
  * Note that a side-effect of this setting is to disable auto-repeat when
  * pressing key twice, except for one-shot keys.
  *
- * See docs.qmk.fm/using-qmk/software-features/tap_hold#tapping-force-hold
+ * @see https://docs.qmk.fm/#/tap_hold?id=tapping-force-hold
  */
-#define TAPPING_FORCE_HOLD
+// #define TAPPING_FORCE_HOLD
 
 /*
  * Tap-or-Hold decision modes.
@@ -64,6 +64,7 @@
  *
  * See bit.ly/tap-or-hold for a visual explanation of the following tap-or-hold
  * decision modes.
+ * @see https://docs.qmk.fm/#/tap_hold?id=tap-hold-configuration-options
  */
 
 /**
@@ -75,7 +76,7 @@
  * With `PERMISSIVE_HOLD`, within `TAPPING_TERM`:
  *   Mod(a)🠗 e🠗 e🠕 Mod(a)🠕 ➞ Mod+e
  *
- * See docs.qmk.fm/using-qmk/software-features/tap_hold#permissive-hold
+ * @see https://docs.qmk.fm/#/tap_hold?id=permissive-hold
  */
 #define PERMISSIVE_HOLD
 
@@ -89,11 +90,19 @@
  * With `IGNORE_MOD_TAP_INTERRUPT`, within `TAPPING_TERM`:
  *   Mod(a)🠗 e🠗 Mod(a)🠕 e🠕 ➞ ae
  *
- * See docs.qmk.fm/using-qmk/software-features/tap_hold#ignore-mod-tap-interrupt
+ * @see https://docs.qmk.fm/#/tap_hold?id=ignore-mod-tap-interrupt
  */
 #define IGNORE_MOD_TAP_INTERRUPT
 
+/**
+ * Holding and releasing a dual-function key without pressing another key will result in nothing happening.
+ * With retro tapping enabled, releasing the key without pressing another will send the original keycode even if it is outside the tapping term.
+ * @see https://docs.qmk.fm/#/tap_hold?id=retro-tapping
+ */
+#define RETRO_TAPPING
 /* Charybdis-specific features. */
+
+
 
 #ifdef POINTING_DEVICE_ENABLE
 // Automatically enable the pointer layer when moving the trackball.  See also:
