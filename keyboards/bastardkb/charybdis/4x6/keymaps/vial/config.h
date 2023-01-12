@@ -54,7 +54,7 @@
  *
  * @see https://docs.qmk.fm/#/tap_hold?id=tapping-force-hold
  */
-#define TAPPING_FORCE_HOLD
+// #define TAPPING_FORCE_HOLD
 
 /*
  * Tap-or-Hold decision modes.
@@ -98,8 +98,10 @@
  * Holding and releasing a dual-function key without pressing another key will result in nothing happening.
  * With retro tapping enabled, releasing the key without pressing another will send the original keycode even if it is outside the tapping term.
  * @see https://docs.qmk.fm/#/tap_hold?id=retro-tapping
+ * 
+ * DISABLED since things like ctrl + mouse click will become troublesome
  */
-#define RETRO_TAPPING
+// #define RETRO_TAPPING
 /* Charybdis-specific features. */
 
 
