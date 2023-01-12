@@ -54,7 +54,7 @@
  *
  * @see https://docs.qmk.fm/#/tap_hold?id=tapping-force-hold
  */
-// #define TAPPING_FORCE_HOLD
+#define TAPPING_FORCE_HOLD
 
 /*
  * Tap-or-Hold decision modes.
